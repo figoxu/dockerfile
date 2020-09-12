@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  dns:
+    image: 'jpillora/dnsmasq'
+    restart: 'always'
+    ports:
+      - "53:53"
+      - "45380:8080"
+    expose: 
+      - "53"
+      - "8080"
+    volumes:
+      - './config/dnsmasq.conf:/etc/dnsmasq.conf' 
+    environment:
+      HTTP_USER: 'foo'
+      HTTP_PASS: 'bar'
