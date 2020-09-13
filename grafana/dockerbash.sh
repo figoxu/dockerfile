@@ -1,0 +1,1 @@
+ docker exec -it grafana_grafana_1  /bin/bash

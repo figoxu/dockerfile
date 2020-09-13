@@ -5,7 +5,7 @@ services:
     image: 'jpillora/dnsmasq'
     restart: 'always'
     ports:
-      - "53:53"
+      - "53:53/udp"
       - "45380:8080"
     expose: 
       - "53"
